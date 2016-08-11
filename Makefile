@@ -90,7 +90,9 @@ check_py_files := \
     $(wildcard $(package_name)/*.py) \
     $(wildcard zhmcclient_mock/*.py) \
     $(wildcard $(cli_package_name)/*.py) \
+    $(wildcard tests/*.py) \
     $(wildcard tests/unit/*.py) \
+    $(wildcard tests/unit/tests/*.py) \
     $(wildcard tests/unit/zhmcclient_mock/*.py) \
     $(wildcard tests/function/*.py) \
     $(wildcard docs/notebooks/*.py) \
