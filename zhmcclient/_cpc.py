@@ -103,6 +103,15 @@ class CpcManager(BaseManager):
             uri_prop='object-uri',
             name_prop='name',
             query_props=query_props)
+        self._client = client
+
+    @property
+    def client(self):
+        """
+        :class:`~zhmcclient.Client`: Client defining the scope for this
+        manager.
+        """
+        return self._client
 
     @logged_api_call
     def list(self, full_properties=False, filter_args=None):
