@@ -49,15 +49,14 @@ Released: not yet
   new resources like Storage Groups, Storage Volumes, and Virtual Storage Resources.
   It also includes new methods for managing storage group attachment to Partitions.
   The new items in the documentation are:
-  - In 5.5. Partitions:
-    - `Partition.attach_storage_group()`
-    - `Partition.detach_storage_group()`
-    - `Partition.list_attached_storage_groups()`
+
+  - In 5.1. CPCs: `list_associated_storage_groups()`, `validate_lun_path()`.
+  - In 5.5. Partitions: `attach_storage_group()`, `detach_storage_group()`,
+    `list_attached_storage_groups()`.
   - 5.12. Storage Groups
   - 5.13. Storage Volumes
   - 5.14. Virtual Storage Resources
-  - In 5.15 Console:
-    - `Console.storage_groups`
+  - In 5.15 Console: `storage_groups`
 
 * Added a property `client` to class `CpcManager` for navigating from a `Cpc`
   object back to the `Client` object which is the top of the resource tree.
