@@ -43,6 +43,13 @@ Released: not yet
   - `PyYAML` from 3.12 to 3.13 (see PyYAML issue
     https://github.com/yaml/pyyaml/issues/126).
 
+* Added support for the new concept of firmware features to Cpcs and Partitions,
+  by adding methods `feature_enabled()` and `feature_info()` to classes `Cpc`
+  and `Partition` for inspection of firmware features. The firmware feature
+  concept was introduced starting with the z14-ZR1 and LinuxONE Rockhopper II
+  machine generation. The DPM storage management feature is the first of these
+  new firmware features.
+
 **Known issues:**
 
 * See `list of open issues`_.
