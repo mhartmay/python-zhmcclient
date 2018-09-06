@@ -113,6 +113,26 @@ class CpcManager(BaseManager):
         """
         return self._client
 
+    @property
+    def console(self):
+        """
+        :class:`~zhmcclient.Console`:
+          The :term:`Console` representing the HMC this CPC is managed by.
+
+          The returned object is cached, so it is looked up only upon first
+          access to this property.
+
+          The returned object has only the following properties set:
+
+          * 'object-uri'
+
+          Use :meth:`~zhmcclient.BaseResource.get_property` or
+          :meth:`~zhmcclient.BaseResource.prop` to access any properties
+          regardless of whether they are already set or first need to be
+          retrieved.
+        """
+        return self.client.consoles.console
+
     @logged_api_call
     def list(self, full_properties=False, filter_args=None):
         """

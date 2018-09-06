@@ -62,6 +62,14 @@ Released: not yet
 * Added a property `client` to class `CpcManager` for navigating from a `Cpc`
   object back to the `Client` object which is the top of the resource tree.
 
+* Provided direct access to the (one) `Console` object, from the
+  `ConsoleManager` and `CpcManager` objects, via a new `console` property.
+  This is for convenience and avoids having to code `find()` or `list()` calls.
+  The returned `Console` object is cached in the manager object.
+
+  Also, added a `console` property to the `FakedConsoleManager` class in the
+  mock support, for the same purpose.
+
 **Known issues:**
 
 * See `list of open issues`_.
