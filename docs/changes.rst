@@ -43,6 +43,9 @@ Released: not yet
   - `PyYAML` from 3.12 to 3.13 (see PyYAML issue
     https://github.com/yaml/pyyaml/issues/126).
 
+* Added a property `client` to class `CpcManager` for navigating from a `Cpc`
+  object back to the `Client` object which is the top of the resource tree.
+
 **Known issues:**
 
 * See `list of open issues`_.
