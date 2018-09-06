@@ -43,6 +43,14 @@ Released: not yet
   - `PyYAML` from 3.12 to 3.13 (see PyYAML issue
     https://github.com/yaml/pyyaml/issues/126).
 
+* Provided direct access to the (one) `Console` object, from the
+  `ConsoleManager` and `CpcManager` objects, via a new `console` property.
+  This is for convenience and avoids having to code `find()` or `list()` calls.
+  The returned `Console` object is cached in the manager object.
+
+  Also, added a `console` property to the `FakedConsoleManager` class in the
+  mock support, for the same purpose.
+
 **Known issues:**
 
 * See `list of open issues`_.
