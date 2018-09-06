@@ -44,6 +44,24 @@ Released: not yet
   - `PyYAML` from 3.12 to 3.13 (see PyYAML issue
     https://github.com/yaml/pyyaml/issues/126).
 
+* Added support for the DPM storage management feature that is available starting
+  with the z14-ZR1 and LinuxONE Rockhopper II machine generation. This includes
+  new resources like Storage Groups, Storage Volumes, and Virtual Storage Resources.
+  It also includes new methods for managing storage group attachment to Partitions.
+  The new items in the documentation are:
+  - In 5.5. Partitions:
+    - `Partition.attach_storage_group()`
+    - `Partition.detach_storage_group()`
+    - `Partition.list_attached_storage_groups()`
+  - 5.12. Storage Groups
+  - 5.13. Storage Volumes
+  - 5.14. Virtual Storage Resources
+  - In 5.15 Console:
+    - `Console.storage_groups`
+
+* Added a property `client` to class `CpcManager` for navigating from a `Cpc`
+  object back to the `Client` object which is the top of the resource tree.
+
 **Known issues:**
 
 * See `list of open issues`_.
